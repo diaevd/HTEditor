@@ -1,8 +1,8 @@
 /* 
  *	HT Editor
- *	htxbeimp.h
+ *	htpeexp.h
  *
- *	Copyright (C) 2003 Stefan Esser
+ *	Copyright (C) 1999-2002 Stefan Weyergraf (stefan@weyergraf.de)
  *
  *	This program is free software; you can redistribute it and/or modify
  *	it under the terms of the GNU General Public License version 2 as
@@ -18,59 +18,51 @@
  *	Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#ifndef __HTXBEIMP_H__
-#define __HTXBEIMP_H__
+#ifndef __HTPEEXP_H__
+#define __HTPEEXP_H__
 
-#include "formats.h"
-#include "xbestruct.h"
+#include "htdata.h"
 #include "htdialog.h"
+#include "formats.h"
 
-extern format_viewer_if htxbeimports_if;
-
-/*
- *	ht_xbe_import_function
- */
-class ht_xbe_import_function: public Object {
-public:
-	UINT libidx;
-	bool byname;
-	union {
-		UINT ordinal;
-		struct {
-			char *name;
-			UINT hint;
-		} name;
-	};
-	RVA address;
-
-	ht_xbe_import_function(RVA address, UINT ordinal);
-	ht_xbe_import_function(RVA address, char *name, UINT hint);
-	~ht_xbe_import_function();
-};
-
-struct ht_xbe_import {
-	ht_clist *funcs;
-	ht_clist *libs;
-};
+extern format_viewer_if htpeexports_if;
 
 /*
- *	ht_xbe_import_viewer
+ *	CLASS ht_pe_export_viewer
  */
-class ht_xbe_import_viewer: public ht_itext_listbox {
+
+class ht_pe_export_viewer: public ht_itext_listbox {
 protected:
 	ht_format_group *format_group;
-	bool grouplib;
-	UINT sortby;
-	/* new */
-			void dosort();
 public:
-			void	init(bounds *b, char *desc, ht_format_group *fg);
+			void	init(bounds *b, ht_format_group *fg);
 	virtual	void	done();
-	/* overwritten */
+/* overwritten */
 	virtual	void handlemsg(htmsg *msg);
 	virtual	bool select_entry(void *entry);
-	/* new */
+/* new */
 			char *func(UINT i, bool execute);
 };
 
-#endif /* !__HTXBEIMP_H__ */
+/*
+ *	CLASS ht_pe_export_function
+ */
+
+class ht_pe_export_function: public Object {
+public:
+	UINT ordinal;
+
+	bool byname;
+	char *name;
+	RVA address;
+
+	ht_pe_export_function(RVA address, UINT ordinal);
+	ht_pe_export_function(RVA address, UINT ordinal, char *name);
+	~ht_pe_export_function();
+};
+
+struct ht_pe_export {
+	ht_clist *funcs;
+};
+
+#endif /* !__HTPEEXP_H__ */

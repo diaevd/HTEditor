@@ -1,8 +1,8 @@
 /* 
  *	HT Editor
- *	htxbeimp.h
+ *	htpeimp.h
  *
- *	Copyright (C) 2003 Stefan Esser
+ *	Copyright (C) 1999-2002 Stefan Weyergraf (stefan@weyergraf.de)
  *
  *	This program is free software; you can redistribute it and/or modify
  *	it under the terms of the GNU General Public License version 2 as
@@ -18,19 +18,30 @@
  *	Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#ifndef __HTXBEIMP_H__
-#define __HTXBEIMP_H__
+#ifndef __HTPEIMP_H__
+#define __HTPEIMP_H__
 
 #include "formats.h"
-#include "xbestruct.h"
-#include "htdialog.h"
 
-extern format_viewer_if htxbeimports_if;
+extern format_viewer_if htpeimports_if;
 
 /*
- *	ht_xbe_import_function
+ *	class ht_pe_import_library
  */
-class ht_xbe_import_function: public Object {
+
+class ht_pe_import_library: public Object {
+public:
+	char *name;
+
+	ht_pe_import_library(char *name);
+	~ht_pe_import_library();
+};
+
+/*
+ *	class ht_pe_import_function
+ */
+
+class ht_pe_import_function: public Object {
 public:
 	UINT libidx;
 	bool byname;
@@ -43,34 +54,35 @@ public:
 	};
 	RVA address;
 
-	ht_xbe_import_function(RVA address, UINT ordinal);
-	ht_xbe_import_function(RVA address, char *name, UINT hint);
-	~ht_xbe_import_function();
+	ht_pe_import_function(UINT libidx, RVA address, UINT ordinal);
+	ht_pe_import_function(UINT libidx, RVA address, char *name, UINT hint);
+	~ht_pe_import_function();
 };
 
-struct ht_xbe_import {
+struct ht_pe_import {
 	ht_clist *funcs;
 	ht_clist *libs;
 };
 
 /*
- *	ht_xbe_import_viewer
+ *	CLASS ht_pe_import_viewer
  */
-class ht_xbe_import_viewer: public ht_itext_listbox {
+
+class ht_pe_import_viewer: public ht_itext_listbox {
 protected:
 	ht_format_group *format_group;
 	bool grouplib;
 	UINT sortby;
-	/* new */
+/* new */
 			void dosort();
 public:
 			void	init(bounds *b, char *desc, ht_format_group *fg);
 	virtual	void	done();
-	/* overwritten */
+/* overwritten */
 	virtual	void handlemsg(htmsg *msg);
 	virtual	bool select_entry(void *entry);
-	/* new */
+/* new */
 			char *func(UINT i, bool execute);
 };
 
-#endif /* !__HTXBEIMP_H__ */
+#endif /* !__HTPEIMP_H__ */
