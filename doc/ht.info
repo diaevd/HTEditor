@@ -1,7 +1,43 @@
+This is ht.info, produced by makeinfo version 5.1 from ht.texi.
+
+START-INFO-DIR-ENTRY
+* ht: (ht.info).             HT Editor.
+END-INFO-DIR-ENTRY
+
+   This file documents the HT Editor.
+
+   Copyright (C) 1999-2013 The HT authors.
+*Note The HT Authors: Authors, for a list of the copyright holders.
+
+   Permission is granted to make and distribute verbatim copies of this
+manual provided the copyright notice and this permission notice are
+preserved on all copies.
+
+
+
+
+
+   Trademarks are the property of their respective owners, which may be
+registered in certain jurisdictions.
+
+
+File: ht.info,  Node: Top,  Prev: (dir),  Up: (dir)
+
 HT Editor
 =========
 
 This is HT 2.1.0; Have fun...
+
+* Menu:
+
+* About::
+* Key bindings::
+* Features::
+* Authors::
+* Where to download?::
+
+
+File: ht.info,  Node: About,  Prev: Top,  Up: Top
 
 About
 =====
@@ -22,6 +58,9 @@ This program is a file viewer, editor and analyzer for text, binary, and
      along with this program; if not, write to the Free Software
      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
      02110-1301 USA.
+
+
+File: ht.info,  Node: Key bindings,  Prev: Top,  Up: Top
 
 Key bindings
 ============
@@ -73,6 +112,9 @@ Key bindings
 Note: Some keys don't work in HT-posix.  Try using Escape instead of
 Control or something...
 
+
+File: ht.info,  Node: Authors,  Prev: Top,  Up: Top
+
 Authors
 =======
 
@@ -80,11 +122,28 @@ Authors
 
    * Sebastian Biallas <sb@biallas.net>
 
+
+File: ht.info,  Node: Features,  Prev: Top,  Up: Top
+
 Features
 ========
 
 HT contains some very advanced and useful features, which you should
 carefully inspect:
+
+* Menu:
+
+* General features::
+* Configuration files::
+* Clipboard::
+* Global history::
+* Expression evaluation::
+* Block operations::
+* Search and its different modes::
+* Command line options::
+
+
+File: ht.info,  Node: General features,  Prev: Features,  Up: Features
 
 General features
 ================
@@ -159,6 +218,9 @@ General features
           - FreeBSD
           - Win32
 
+
+File: ht.info,  Node: Configuration files,  Prev: Features,  Up: Features
+
 Configuration files
 ===================
 
@@ -177,6 +239,9 @@ The analyser (for analysable files) will be stored in an extra file
 called 'FILENAME.htcfg', where FILENAME is the analysed file.  This file
 contains all information to restore the complete state of the analyser.
 
+
+File: ht.info,  Node: Clipboard,  Prev: Features,  Up: Features
+
 Clipboard
 =========
 
@@ -193,6 +258,9 @@ it or part of it manually (via Edit->paste into/copy from file) or rely
 on the input lines' *Note history: Global history, which is stored and
 retrieved from the config file automatically.
 
+
+File: ht.info,  Node: Global history,  Prev: Features,  Up: Features
+
 Global history
 ==============
 
@@ -206,6 +274,9 @@ they can be reused when you relaunch.
 
    You can delete a history entry by pressing DEL inside the history
 popup.
+
+
+File: ht.info,  Node: Expression evaluation,  Prev: Features,  Up: Features
 
 Expression evaluation
 =====================
@@ -249,6 +320,9 @@ byte of a file.
 context depending functions and symbols; see these sections for
 explanation.
 
+
+File: ht.info,  Node: Block operations,  Prev: Features,  Up: Features
+
 Block operations
 ================
 
@@ -273,6 +347,9 @@ Special variables/functions that can be used in EXPRESSION:
      contains the iteration count/index starting with 0
 'o'
      contains the current offset
+
+
+File: ht.info,  Node: Search and its different modes,  Prev: Features,  Up: Features
 
 Search and its different modes
 ==============================
@@ -341,6 +418,9 @@ file's content.
      Note: the 'entropy()' function is not the best of its kind, if you
      know of a better one please let us know!
 
+
+File: ht.info,  Node: Command line options,  Prev: Features,  Up: Features
+
 Command line options
 ====================
 
@@ -356,6 +436,9 @@ Command line options
                        
 '-a'    '--auto'       try to guess file type
 
+
+File: ht.info,  Node: Where to download?,  Prev: Top,  Up: Top
+
 Where to download?
 ==================
 
@@ -364,3 +447,22 @@ The HT homepage is located at <http://hte.sourceforge.net>
 Downloads are available from the 'download' section.  Please also take a
 look at <http://sourceforge.net/projects/hte>
 
+
+
+Tag Table:
+Node: Top577
+Node: About769
+Node: Key bindings1613
+Node: Authors3370
+Node: Features3506
+Node: General features3865
+Node: Configuration files6648
+Node: Clipboard7293
+Node: Global history8103
+Node: Expression evaluation8650
+Node: Block operations10541
+Node: Search and its different modes11429
+Node: Command line options14092
+Node: Where to download?14654
+
+End Tag Table
