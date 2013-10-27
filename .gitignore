@@ -25,3 +25,11 @@ README
 *.o
 *.a
 *~
+build-stamp
+configure-stamp
+debian/files
+debian/hteditor.debhelper.log
+debian/hteditor.substvars
+debian/hteditor/
+tools/bin2c
+ylwrap

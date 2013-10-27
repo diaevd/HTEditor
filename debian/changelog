@@ -1,5 +1,6 @@
-ht-editor (0.90) unstable; urgency=low
+hteditor (2.1.0~ubuntu1) UNRELEASED; urgency=low
 
-  * first debian build version
+  [ Evgeny V Duzhakov ]
+  * HT Editor 2.1.0 port for Ubuntu 13.10 Saucy Salamander
 
- -- Reimar Döffinger <Reimar.Doeffinger@stud.uni-karlsruhe.de>  Mon, 16 May 2005 14:09:32 +0100
+ -- diabolo <diabolo@diabolo.su>  Mon, 28 Oct 2013 01:58:41 +0400

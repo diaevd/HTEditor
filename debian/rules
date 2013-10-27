@@ -4,7 +4,7 @@
 # This is the debhelper compatability version to use.
 export DH_COMPAT=3
 
-package        := ht-editor
+package        := hteditor
 prefix := $(shell pwd)/debian/$(package)
 
 arch   := $(shell dpkg --print-architecture)
