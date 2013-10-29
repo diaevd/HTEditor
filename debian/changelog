@@ -1,6 +1,6 @@
-hteditor (2.1.0~ubuntu1) UNRELEASED; urgency=low
+hteditor (2.1.0~ubuntu1) saucy; urgency=low
 
   [ Evgeny V Duzhakov ]
   * HT Editor 2.1.0 port for Ubuntu 13.10 Saucy Salamander
 
- -- diabolo <diabolo@diabolo.su>  Mon, 28 Oct 2013 01:58:41 +0400
+ -- Evgeny V Duzhakov <diabolo@diabolo.su>  Tue, 29 Oct 2013 14:18:25 +0400

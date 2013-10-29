@@ -3,6 +3,19 @@ HT Editor
 
 This is HT 2.1.0; Have fun...
 
+Now you can get source repository from github
+Just: git clone https://github.com/diavd/HTEditor
+
+Binary package for Ubuntu Saucy Salamander found at https://launchpad.net/~diaevd/+archive/ppa
+
+For install on Ubuntu Saucy do:
+
+$ sudo add-apt-repository ppa:diaevd/ppa
+$ sudo apt-get update
+$ sudo apt-get install hteditor
+
+and run hte
+
 About
 =====
 

@@ -3,6 +3,7 @@ Maintainer: Evgeny V Duzhakov <diabolo@diabolo.su>
 Section: utils
 Priority: optional
 Depends: ${shlibs:Depends}, ${utils:Depends}
+Build-depends: debhelper, libncurses-dev, ncurses-dev, liblzo2-dev
 
 Package: hteditor
 Version: 2.1.0-1
